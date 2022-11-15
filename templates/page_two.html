@@ -1,0 +1,23 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}QUESTION TWO{% endblock %}
+
+{% block body %}
+<h1>Select a Local Government Area</h1>
+
+<div class="form-group">
+    <form action="{% url 'page_two' %}" method="post"  >
+        {% csrf_token %}
+        <!--The 'value' attribute of the select tags specifies the data being returned which is the lga_id of the Lga models referenced with the variables 'pot' and 'po' -->
+        <select class="form-select" aria-label="Default select example" name="lga_id">
+        <option selected value="{{pot.lga_id}}">{{pot.lga_name}}</option>
+        {% for po in x %}
+        <option value="{{po.lga_id}}">{{po.lga_name}}</option>
+        {% endfor %}
+        </select>
+        <br>
+        <button class="button-18" role="button" type="submit">submit</button>
+    </form>
+</div>
+
+{% endblock %}

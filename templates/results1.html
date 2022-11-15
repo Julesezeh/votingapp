@@ -1,0 +1,26 @@
+{% extends 'base_layout.html' %}
+
+{% block title%}QUESTION ONE SOLUTION{% endblock %}
+
+{% block body %}
+<a href="{% url 'index' %}"  style="text-decoration:none ;"><button class="button-18" role="button">Back</button></a>
+<br>
+{% if xo %}
+<h1>Results of the selected polling unit are:</h1>
+<ul class="list-group">
+    {% for p in xo %}
+        <li class="list-group-item disabled">{{p.party_abbreviation}}: {{p.party_score}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<br>
+<h1>No results in this Polling unit</h1>
+{% endif %}
+
+
+
+
+
+
+
+{% endblock %}

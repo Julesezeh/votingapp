@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}QUESTION ONE{% endblock %}
+
+{% block body %}
+<h1>Input a polling unit unique ID</h1>
+    <div class="form-group">
+        <form action="{% url 'index' %}" method="post" >
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="button-18" role="button" type="submit">submit</button>
+        </form>
+    </div>
+
+
+{% endblock %}

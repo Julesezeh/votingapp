@@ -1,0 +1,48 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}QUESTION THREE{% endblock %}
+
+{% block body %}
+<h1>Enter the results for the new polling unit</h1>
+<br>
+<form action="{% url 'page_three' %}" method="post">
+    {% csrf_token %}
+    
+    <div class="form-group col-12 col-md-5">
+        <label for="formGroupExampleInput">Polling unit unique ID</label>
+        <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Polling unit unique ID" name = "pol-id">
+    </div>
+    
+    <div class="form-group col-12 col-md-5">
+        <label for="formGroupExampleInput">User</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="User" name="user">
+    </div>
+    <br>
+    <br>
+    <div class="form-row form-group col-12 col-md-5">
+
+    <label for="too-far"><b> Party name </b></label>
+    <select class="form-select" aria-label="Default select example" name="party" id="too-far">
+        <option selected value="{{potter.partyname}}">{{potter.partyname}}</option>
+        {% for po in others %}
+        <option value="{{po.partyname}}">{{po.partyname}}</option>
+        {% endfor %}
+    </select>
+    
+    <label for="party-score"><b>Party score</b></label>
+    <div class="form-group col-md-4 mb-3" id="party-score">
+        <input type="number" class="form-control" id="formGroupExampleInput2" value="0" name="party-score">
+
+    </div>
+
+    <button class="button-18" role="button" type="submit">submit</button>
+    </div>
+
+</form>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base_layout.html' %}
+
+{% block title%}QUESTION TWO SOLUTION{% endblock %}
+
+{% block body %}
+<a href="{% url 'page_two' %}"  style="text-decoration:none ;"><button class="button-18" role="button">Back</button></a>
+<br>
+{% if results %}
+<h1>Results of the Polling Units of the selected Local Government Area are:</h1>
+<ul class="list-group">
+    {% for p in results %}
+        <li class="list-group-item disabled">{{p.party_abbreviation}}: {{p.party_score}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h1>No votes from this LGA</h1>
+{% endif %}
+
+
+
+
+
+
+{% endblock %}

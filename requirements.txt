@@ -1,0 +1,22 @@
+asgiref @ file:///tmp/build/80754af9/asgiref_1625643473416/work
+beautifulsoup4==4.11.1
+certifi==2021.5.30
+Django @ file:///tmp/build/80754af9/django_1625585912945/work
+django-bootstrap4==22.1
+django-crispy-forms==1.14.0
+Faker @ file:///tmp/build/80754af9/faker_1624291529673/work
+mysql==0.0.3
+mysql-connector-python==8.0.29
+mysqlclient==2.1.1
+Pillow==8.4.0
+protobuf==4.21.2
+psycopg2 @ file:///C:/ci/psycopg2_1612298766762/work
+PyMySQL==1.0.2
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+six @ file:///tmp/build/80754af9/six_1623709665295/work
+soupsieve==2.3.2.post1
+sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
+text-unidecode==1.3
+typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1624965014186/work
+wincertstore==0.2
