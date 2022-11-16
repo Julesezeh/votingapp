@@ -8,7 +8,7 @@ from .serializers import LgaSerializer
 from django.shortcuts import render
 from .models import *
 from  .forms import Search
-
+import json
 #The view function for question one
 def index(request):
     if request.method == 'POST':
@@ -60,19 +60,25 @@ def page_two(request):
 #The view function for question three
 def page_three(request):
     if request.method == 'POST':
+
         pol_id=request.POST.get("pol-id")
         ent_user=request.POST.get('user')
-        par=request.POST.get('party')
-        score=request.POST.get('party-score')
         current_date = datetime.datetime.now()
-        print(current_date)
-        rex = AnnouncedPuResults(polling_unit_uniqueid=pol_id,party_abbreviation=par,party_score=score,entered_by_user=ent_user,date_entered=current_date,user_ip_address="192.168.1.101")
+        for x in Party.objects.all():
+            par1 = request.POST.get(f"{x.partyname}")
+            print(len(par1))
+            test = request.POST.get(f"{x.partyname}-score")
+            print(par1)
+            print(test)
+            par = request.POST.get(f"{x.partyname}")
+            score=request.POST.get(f"{x.partyname}-score")
+            rex = AnnouncedPuResults(polling_unit_uniqueid=pol_id,party_abbreviation=par,party_score=score,entered_by_user=ent_user,date_entered=current_date,user_ip_address="192.168.1.101")
         rex.save()
         return render(request,'solution_three.html')
 
     parties = Party.objects.all()
     lgas = Lga.objects.all()
-    return render(request,'page_three.html',context={'x':lgas[1:],'pot':lgas[0],'others':parties[1:],'potter':parties[0]})
+    return render(request,'page_three.html',context={'x':lgas[1:],'all_parties':parties,'pot':lgas[0],'others':parties[1:],'potter':parties[0]})
 
 class APUView(generics.ListAPIView):
     pass

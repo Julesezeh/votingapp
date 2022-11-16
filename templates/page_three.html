@@ -21,20 +21,15 @@
     <br>
     <div class="form-row form-group col-12 col-md-5">
 
-    <label for="too-far"><b> Party name </b></label>
-    <select class="form-select" aria-label="Default select example" name="party" id="too-far">
-        <option selected value="{{potter.partyname}}">{{potter.partyname}}</option>
-        {% for po in others %}
-        <option value="{{po.partyname}}">{{po.partyname}}</option>
+        {% for x in all_parties %}
+            <input type="hidden" value="{{x.partyname}}" name="{{x.partyname}}">
+            <label for="{{x.partyname}}-score"><b>{{x.partyname}}</b></label>
+        
+            <div class="form-group col-md-4 mb-3" id="party-score">
+                <input type="number" class="form-control" id="formGroupExampleInput2" value="0" name="{{x.partyname}}-score">
+
+            </div>
         {% endfor %}
-    </select>
-    
-    <label for="party-score"><b>Party score</b></label>
-    <div class="form-group col-md-4 mb-3" id="party-score">
-        <input type="number" class="form-control" id="formGroupExampleInput2" value="0" name="party-score">
-
-    </div>
-
     <button class="button-18" role="button" type="submit">submit</button>
     </div>
 
