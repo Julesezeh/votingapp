@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'voting',
-    'api',
+    'apis',
 
 ]
 
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'Interview.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bincomphptest',
+        'NAME': 'bincomtest',
         'HOST': 'localhost',
         'PORT': '3306',
         'USER':'root',

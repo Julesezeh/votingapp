@@ -1,7 +1,9 @@
 import datetime
 from re import X
 from django.shortcuts import render, redirect
-
+from rest_framework import generics
+from .models import Lga
+from .serializers import LgaSerializer
 # Create your views here.
 from django.shortcuts import render
 from .models import *
@@ -71,3 +73,9 @@ def page_three(request):
     parties = Party.objects.all()
     lgas = Lga.objects.all()
     return render(request,'page_three.html',context={'x':lgas[1:],'pot':lgas[0],'others':parties[1:],'potter':parties[0]})
+
+class APUView(generics.ListAPIView):
+    pass
+class LgaResults(generics.RetrieveAPIView):
+    pass
+
