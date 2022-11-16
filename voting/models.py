@@ -38,14 +38,14 @@ class AnnouncedLgaResults(models.Model):
 class AnnouncedPuResults(models.Model):
     result_id = models.AutoField(primary_key=True)
     polling_unit_uniqueid = models.CharField(max_length=50)
-    party_abbreviation = models.CharField(max_length=4)
+    party_abbreviation = models.CharField(max_length=7)
     party_score = models.IntegerField()
     entered_by_user = models.CharField(max_length=50)
     date_entered = models.DateTimeField()
     user_ip_address = models.CharField(max_length=50)
 
     class Meta:
-        managed = False
+        
         db_table = 'announced_pu_results'
 
 

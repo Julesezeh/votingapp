@@ -65,15 +65,10 @@ def page_three(request):
         ent_user=request.POST.get('user')
         current_date = datetime.datetime.now()
         for x in Party.objects.all():
-            par1 = request.POST.get(f"{x.partyname}")
-            print(len(par1))
-            test = request.POST.get(f"{x.partyname}-score")
-            print(par1)
-            print(test)
             par = request.POST.get(f"{x.partyname}")
             score=request.POST.get(f"{x.partyname}-score")
             rex = AnnouncedPuResults(polling_unit_uniqueid=pol_id,party_abbreviation=par,party_score=score,entered_by_user=ent_user,date_entered=current_date,user_ip_address="192.168.1.101")
-        rex.save()
+            rex.save()
         return render(request,'solution_three.html')
 
     parties = Party.objects.all()
