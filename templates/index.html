@@ -3,14 +3,17 @@
 {% block title %}QUESTION ONE{% endblock %}
 
 {% block body %}
-<h1>Input a polling unit unique ID</h1>
+<div style="color:rgba(0, 0, 0, 0.658);"  >
+<h1 style="font-size:3em;">Input a polling unit unique ID</h1>
     <div class="form-group">
         <form action="{% url 'index' %}" method="post" >
             {% csrf_token %}
+            <div style="font-size:1.5em;">
             {{form.as_p}}
+            </div>
             <button class="button-18" role="button" type="submit">submit</button>
         </form>
     </div>
-
+</div>
 
 {% endblock %}

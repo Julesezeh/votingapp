@@ -3,18 +3,19 @@
 {% block title %}QUESTION THREE{% endblock %}
 
 {% block body %}
-<h1>Enter the results for the new polling unit</h1>
+<div style="color:rgba(0, 0, 0, 0.658);">
+<h1 style="font-size:3em; text-align: center;">Enter the results for the new polling unit</h1>
 <br>
 <form action="{% url 'page_three' %}" method="post">
     {% csrf_token %}
     
     <div class="form-group col-12 col-md-5">
-        <label for="formGroupExampleInput">Polling unit unique ID</label>
+        <label for="formGroupExampleInput" style="font-size:1.5em;">Polling unit unique ID</label>
         <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Polling unit unique ID" name = "pol-id">
     </div>
     
     <div class="form-group col-12 col-md-5">
-        <label for="formGroupExampleInput">User</label>
+        <label for="formGroupExampleInput" style="font-size:1.5em;">User</label>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="User" name="user">
     </div>
     <br>
@@ -39,5 +40,5 @@
 
 
 
-
+</div>
 {% endblock %}
