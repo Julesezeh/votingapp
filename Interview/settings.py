@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'Interview.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bincomtest',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'peterpiper',
+        'USER': 'postgres',
+        'PASSWORD': '$0Rrynotsorry',
         'HOST': 'localhost',
-        'PORT': '3306',
-        'USER':'root',
-        'PASSWORD':'$0Rrynotsorry',
+        'PORT': '5432',
     }
 }
 

@@ -21,10 +21,6 @@ class Migration(migrations.Migration):
                 ('phone', models.CharField(max_length=13)),
                 ('pollingunit_uniqueid', models.IntegerField()),
             ],
-            options={
-                'db_table': 'agentname',
-                'managed': False,
-            },
         ),
         migrations.CreateModel(
             name='AnnouncedLgaResults',
@@ -37,10 +33,6 @@ class Migration(migrations.Migration):
                 ('date_entered', models.DateTimeField()),
                 ('user_ip_address', models.CharField(max_length=50)),
             ],
-            options={
-                'db_table': 'announced_lga_results',
-                'managed': False,
-            },
         ),
         migrations.CreateModel(
             name='AnnouncedPuResults',
@@ -53,10 +45,6 @@ class Migration(migrations.Migration):
                 ('date_entered', models.DateTimeField()),
                 ('user_ip_address', models.CharField(max_length=50)),
             ],
-            options={
-                'db_table': 'announced_pu_results',
-                'managed': False,
-            },
         ),
         migrations.CreateModel(
             name='AnnouncedStateResults',
@@ -69,10 +57,6 @@ class Migration(migrations.Migration):
                 ('date_entered', models.DateTimeField()),
                 ('user_ip_address', models.CharField(max_length=50)),
             ],
-            options={
-                'db_table': 'announced_state_results',
-                'managed': False,
-            },
         ),
         migrations.CreateModel(
             name='AnnouncedWardResults',
@@ -85,10 +69,6 @@ class Migration(migrations.Migration):
                 ('date_entered', models.DateTimeField()),
                 ('user_ip_address', models.CharField(max_length=50)),
             ],
-            options={
-                'db_table': 'announced_ward_results',
-                'managed': False,
-            },
         ),
         migrations.CreateModel(
             name='Lga',
@@ -102,10 +82,6 @@ class Migration(migrations.Migration):
                 ('date_entered', models.DateTimeField()),
                 ('user_ip_address', models.CharField(max_length=50)),
             ],
-            options={
-                'db_table': 'lga',
-                'managed': False,
-            },
         ),
         migrations.CreateModel(
             name='Party',
@@ -114,10 +90,6 @@ class Migration(migrations.Migration):
                 ('partyid', models.CharField(max_length=11)),
                 ('partyname', models.CharField(max_length=11)),
             ],
-            options={
-                'db_table': 'party',
-                'managed': False,
-            },
         ),
         migrations.CreateModel(
             name='PollingUnit',
@@ -136,10 +108,6 @@ class Migration(migrations.Migration):
                 ('date_entered', models.DateTimeField(blank=True, null=True)),
                 ('user_ip_address', models.CharField(blank=True, max_length=50, null=True)),
             ],
-            options={
-                'db_table': 'polling_unit',
-                'managed': False,
-            },
         ),
         migrations.CreateModel(
             name='States',
@@ -147,10 +115,6 @@ class Migration(migrations.Migration):
                 ('state_id', models.IntegerField(primary_key=True, serialize=False)),
                 ('state_name', models.CharField(max_length=50)),
             ],
-            options={
-                'db_table': 'states',
-                'managed': False,
-            },
         ),
         migrations.CreateModel(
             name='Ward',
@@ -164,9 +128,5 @@ class Migration(migrations.Migration):
                 ('date_entered', models.DateTimeField()),
                 ('user_ip_address', models.CharField(max_length=50)),
             ],
-            options={
-                'db_table': 'ward',
-                'managed': False,
-            },
         ),
     ]
