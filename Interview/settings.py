@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'Interview.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'peterpiper',
+        'NAME': 'sly',
         'USER': 'postgres',
         'PASSWORD': '$0Rrynotsorry',
         'HOST': 'localhost',
