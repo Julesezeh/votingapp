@@ -7,7 +7,7 @@
 <br>
 {% if xo %}
 <h1>Results of the selected polling unit are:</h1>
-<ul class="list-group">
+<ul class="list-group" style="margin-top:200px;">
     {% for p in xo %}
         <li class="list-group-item disabled">{{p.party_abbreviation}}: {{p.party_score}}</li>
     {% endfor %}
