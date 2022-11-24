@@ -7,3 +7,4 @@ This endpoint leads you to a page that allows you select a particular local gove
 3. julesbincom.herokuapp.com/2
 This endpoint leads to a page that allows you store the results of all parties for a new polling unit.
  
+Database link: https://drive.google.com/file/d/0B77xAtHK1hd4Ukx6SHpqTkd6TWM/view?resourcekey=0-Uwrx8FyB_HnpYdskhHfYTw
